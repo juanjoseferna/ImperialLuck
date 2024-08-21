@@ -24,7 +24,7 @@ jobs:
           
       - name: Create deployment package
         run: |
-          zip -r deploy.zip . -x '*.git*'
+          zip deploy.zip lambda_function.py
           
       - name: Deploy to AWS Lambda
         run: |
