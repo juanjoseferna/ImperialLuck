@@ -3,7 +3,7 @@ import time
 
 def lambda_handler(event, context):
     # Ejemplo de respuesta al aceptar la política de tratamiento de datos
-    print("Politicas y tratamientos de los datos: mucho texto from github \n - Fecha y hora:", time.strftime("%Y-%m-%d %H:%M:%S"))
+    print("Politicas y tratamientos de los datos: mucho texto from github 1 \n - Fecha y hora:", time.strftime("%Y-%m-%d %H:%M:%S"))
     response = {
         'statusCode': 200,
         'body': json.dumps('Política de tratamiento de datos aceptada')
