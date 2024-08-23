@@ -1,0 +1,17 @@
+version: 0.0
+resources:
+  - myLambdaFunction:
+      type: AWS::Lambda::Function
+      properties:
+        name: "MyLambdaFunction"
+        alias: "live"
+        currentversion: "arn:aws:lambda:us-east-2:242201297703:function:Lambda_ImperialLuck1"
+hooks:
+  BeforeAllowTraffic:
+    - location: scripts/validate.sh
+      timeout: 300
+      runas: root
+  AfterAllowTraffic:
+    - location: scripts/cleanup.sh
+      timeout: 300
+      runas: root
